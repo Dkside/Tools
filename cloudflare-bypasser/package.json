@@ -1,0 +1,41 @@
+{
+  "name": "cloudflare-bypasser",
+  "version": "0.0.3",
+  "description": "A simple Node.js module to bypass Cloudflare anti-DDOS page",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Ostap Skryshevskyi",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "extend": "^3.0.1",
+    "index.js": "0.0.3",
+    "prettyjson": "^1.2.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamikadze4GAME/cloudflare-bypasser.git"
+  },
+  "keywords": [
+    "cloudflare",
+    "scrape",
+    "ddos"
+  ],
+  "bugs": {
+    "url": "https://github.com/Kamikadze4GAME/cloudflare-bypasser/issues"
+  },
+  "homepage": "https://github.com/Kamikadze4GAME/cloudflare-bypasser#readme"
+}

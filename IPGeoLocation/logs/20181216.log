@@ -1,0 +1,18 @@
+[INFO] 2018-12-16 09:30:12 - Retrieving 82.30.26.4 Geolocation..
+[INFO] 2018-12-16 09:30:14 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2018-12-16 09:30:14 - Geolocation information has been retrieved for 82.30.26.4(82.30.26.4).
+[ERROR] 2018-12-16 09:34:59 - Please provide a valid Domain or IP address!
+[ERROR] 2018-12-16 09:34:59 - Retrieving IP Geolocation information failed.
+[ERROR] 2018-12-16 09:35:11 - Please provide a valid Domain or IP address!
+[ERROR] 2018-12-16 09:35:11 - Retrieving IP Geolocation information failed.
+[ERROR] 2018-12-16 09:35:16 - Please provide a valid Domain or IP address!
+[ERROR] 2018-12-16 09:35:16 - Retrieving IP Geolocation information failed.
+[INFO] 2018-12-16 09:35:39 - Retrieving 86.100.154.185 Geolocation..
+[INFO] 2018-12-16 09:35:40 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2018-12-16 09:35:40 - Geolocation information has been retrieved for 86.100.154.185(86.100.154.185).
+[INFO] 2018-12-16 10:04:16 - Retrieving 86.100.71.243 Geolocation..
+[ERROR] 2018-12-16 10:04:24 - An unexpected error occurred Remote end closed connection without response!
+[ERROR] 2018-12-16 10:04:24 - Retrieving IP Geolocation information failed.
+[INFO] 2018-12-16 10:04:42 - Retrieving 86.100.71.243 Geolocation..
+[INFO] 2018-12-16 10:04:43 - User-Agent used: IP2GeoLocation 2.0.4
+[INFO] 2018-12-16 10:04:43 - Geolocation information has been retrieved for 86.100.71.243(86.100.71.243).

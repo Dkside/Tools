@@ -1,0 +1,40 @@
+/** 1.12.0 / 27 March 2018 **/
+
+Added exception for resolvconf package
+Deleted unnecessary sleep statements
+Added the check status at the end of the start function
+Improve output messages
+Modified file data/torrc
+
+
+/** 1.12.1 / 19 May 2018 **/
+
+Modified file data/torrc
+Little fixes in printf functions
+
+
+/** 1.13.0 / 05 Sep 2018 **/
+
+Fix value of global variable 'tor_uid'
+Change iptables rules on 'main()' function
+Changed names of command line arguments and added "shortopts"
+Change entries on 'usage()' function (help menù)
+Changes in 'check_defaults()' function (added [isolation flags] on TransPort option)
+Other some little changes in functions: main(), check_root(), check_status(), check_ip()
+Modified file 'data/torrc'
+Modified Makefile
+Update README
+
+
+/** 1.13.1 / 12 Oct 2018 **/
+
+Little fixes "around the program"
+Fix comparison operator for parsing command line options
+
+
+/** 1.14.0 / 25 Dic 2018 **/
+
+Modified many comments for a better reading (I hope)
+Changes on 'main()' function, change order of dns/iptables instructions
+Little changes on 'banner()' function
+Added information on 'check_status()' function when network error occurred

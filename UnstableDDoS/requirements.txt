@@ -1,0 +1,3 @@
+pysocks
+bs4
+kamene

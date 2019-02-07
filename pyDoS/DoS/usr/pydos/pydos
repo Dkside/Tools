@@ -1,0 +1,4 @@
+#!/bin/bash
+
+python /etc/init.d/DOS.py
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=pyDoS
+Exec=/usr/bin/DOSAPP
+Type=Application
+Icon=/opt/pydos/pydos.jpeg
+Comment=DoS Attacks
+Categories=GTK;GNOME;
